@@ -2,9 +2,12 @@ import React from 'react';
 import {Button, Row, Col, Navbar, NavItem, Nav, NavDropdown, MenuItem, FormGroup, FormControl, Glyphicon, PageFooter, ResponsiveEmbed, Grid} from 'react-bootstrap';
 
 const Layout = ({content}) => (
-  <Navbar inverse>
+<Grid>
+<Row>
+<Col xs={12}>
+<Navbar inverse>
   <Nav>
-  <NavItem eventKey={1} href="#"><img src= "https://www.google.com.vn/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiW-4_W97LXAhVMu48KHeSbClMQjRwIBw&url=http%3A%2F%2Fwww.vectortemplates.com%2Fraster-batman.php&psig=AOvVaw1QqaZWjsoiICnp7_dMX2zg&ust=1510366452366159" width= "50px" height= "20px"/></NavItem>
+    <NavItem eventKey={1} href="#"><img src= "./publics/Images/logo.jpg"/>Logo insert here</NavItem>
   </Nav>
   <Nav>
     <Navbar.Form pullLeft>
@@ -13,7 +16,7 @@ const Layout = ({content}) => (
       </FormGroup>
       {' '}
       <Button type="submit" ><Glyphicon glyph= "search"></Glyphicon></Button>
-      </Navbar.Form>
+    </Navbar.Form>
       <NavItem eventKey={1} href="#">Find Match</NavItem>
       <NavItem eventKey={2} href="#">Grounds</NavItem>
       <NavItem eventKey={3} href="#">Messages</NavItem>
@@ -30,5 +33,12 @@ const Layout = ({content}) => (
   </NavDropdown>
   </Nav>
 </Navbar>
+</Col>
+</Row>
+
+  {content()}
+
+</Grid>
 );
+
 export default Layout
