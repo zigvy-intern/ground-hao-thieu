@@ -1,10 +1,10 @@
 import React from 'react';
-import {Button, Row, Col, Navbar, NavItem, Nav, NavDropdown, MenuItem, FormGroup, FormControl, Glyphicon, PageFooter, ResponsiveEmbed, Grid} from 'react-bootstrap';
+import {PageHeader, Button, Row, Col, Navbar, NavItem, Nav, NavDropdown, MenuItem, FormGroup, FormControl, Glyphicon, PageFooter, ResponsiveEmbed, Grid} from 'react-bootstrap';
 
 const Layout = ({content}) => (
 <Grid>
 <Row>
-<Col xs={12}>
+<Col>
 <Navbar inverse>
   <Nav>
     <NavItem eventKey={1} href="#"><img src= "./publics/Images/logo.jpg"/>Logo insert here</NavItem>
@@ -25,7 +25,7 @@ const Layout = ({content}) => (
 
   <Nav pullRight>
   <NavDropdown  title={
-    <Col xs={6} md={4}>
+    <Col xs={4} ms={6}>
       <Glyphicon glyph="user"></Glyphicon></Col>} id="basic-nav-dropdown" >
   <MenuItem eventKey={1} href="#"><Glyphicon glyph= "log-in"></Glyphicon> Login</MenuItem>
   <MenuItem eventKey={1} href="#"><Glyphicon glyph= "log-out"></Glyphicon> Logout </MenuItem>
@@ -35,10 +35,25 @@ const Layout = ({content}) => (
 </Navbar>
 </Col>
 </Row>
+{content()}
+<Row>
+<Navbar>
+<Row>
+<Nav>
+<NavItem eventKey={1} href="#">Download App</NavItem>
+<NavItem eventKey={2} href="#">F.A.Q</NavItem>
+<NavItem eventKey={3} href="#">Support</NavItem>
+<NavItem eventKey={4} href="#">Feedback</NavItem>
+</Nav>
+<Nav pullRight>
+<MenuItem eventKey={1} href="#"><Glyphicon glyph= "envelope"></Glyphicon></MenuItem>
+<MenuItem eventKey={2} href="#"><Glyphicon glyph= "earphone"></Glyphicon></MenuItem>
+</Nav>
+</Row>
 
-  {content()}
-
+<p> © 2017 Zigvy Inc </p>
+</Navbar>
+</Row>
 </Grid>
 );
-
 export default Layout
