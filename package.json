@@ -30,6 +30,7 @@
     "react-bootstrap": "^0.31.5",
     "react-bootstrap-datetimepicker": "0.0.22",
     "react-dom": "^0.14.6",
+    "react-fontawesome": "^1.6.1",
     "react-mounter": "^1.0.0"
   }
 }
