@@ -1,13 +1,12 @@
 import React from 'react';
 import {PageHeader, Button, Row, Col, Navbar, NavItem, Nav, NavDropdown, MenuItem, FormGroup, FormControl, Glyphicon, PageFooter, ResponsiveEmbed, Grid} from 'react-bootstrap';
 import FontAwesome from 'react-fontawesome';
-
 const Layout = ({content}) => (
 <div>
       <Navbar inverse style={{backgroundColor:"black"}} collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="http://localhost:3000/"><img src= "https://i.imgur.com/0hzaXxK.png" height="29" width="auto"/></a>
+            <a href="http://localhost:3000/"><img src= "https://i.imgur.com/0hzaXxK.png" height="auto" width="auto"/></a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
