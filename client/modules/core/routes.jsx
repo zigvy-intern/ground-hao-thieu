@@ -21,7 +21,7 @@ export default function (injectDeps, {FlowRouter}) {
     name: 'users.new',
     action() {
       mount(MainLayoutCtx, {
-        content: () => (<NewUser />)
+        content: () => (<NewUser/>)
       });
     }
   });
@@ -30,7 +30,7 @@ export default function (injectDeps, {FlowRouter}) {
     name: 'users.login',
     action() {
       mount(MainLayoutCtx, {
-        content: () => (<Login />)
+        content: () => (<Login/> )
       });
     }
   });
