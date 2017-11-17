@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Panel, Input,FormGroup, FormControl, Button, Glyphicon } from 'react-bootstrap';
-
   class Login extends React.Component {
       render() {
         const {error} = this.props;
@@ -23,10 +22,8 @@ import { Col, Panel, Input,FormGroup, FormControl, Button, Glyphicon } from 'rea
                     </Panel>
                   </Col>
             </div>
-
-              )
-            }
-
+          )
+        }
         login(e) {
             e.preventDefault();
             const {loginUser} = this.props;
