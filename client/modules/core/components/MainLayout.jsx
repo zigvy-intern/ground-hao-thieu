@@ -20,7 +20,7 @@ const Layout = ({content}) => (
          </Navbar.Form>
          <Nav>
            <NavItem eventKey={1} href="#">Find Match</NavItem>
-           <NavItem eventKey={2} href="#">Grounds</NavItem>
+           <NavItem eventKey={2} href="http://localhost:3000/">Grounds</NavItem>
            <NavItem eventKey={3} href="#">Messages</NavItem>
            <NavItem eventKey={4} href="#">Upcoming</NavItem>
          </Nav>
@@ -36,7 +36,9 @@ const Layout = ({content}) => (
         </Navbar.Collapse>
       </Navbar>
       <Navbar>
+      
       {content()}
+
       </Navbar>
       <Navbar style={{bottom:"0", width:"100%"}} >
       <Row>
