@@ -4,6 +4,7 @@ import Layout from './components/MainLayout.jsx';
 import HomePage from '../items/components/HomePage.jsx';
 import NewUser from '../users/containers/NewUser.js';
 import Login from '../users/containers/Login.js';
+import GroundDetail from '../items/components/PageDetail.jsx';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(Layout);
@@ -13,6 +14,15 @@ export default function (injectDeps, {FlowRouter}) {
     action() {
       mount(MainLayoutCtx, {
         content: () => (<HomePage />)
+      });
+    }
+  });
+
+  FlowRouter.route('/Detail', {
+    name: 'ground.detail',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<GroundDetail />)
       });
     }
   });

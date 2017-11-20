@@ -26,6 +26,7 @@
     "babel-runtime": "^6.26.0",
     "domready": "^1.0.8",
     "mantra-core": "^1.2.0",
+    "materialize-css": "^0.100.2",
     "react": "^0.14.6",
     "react-bootstrap": "^0.31.5",
     "react-bootstrap-datetimepicker": "0.0.22",
