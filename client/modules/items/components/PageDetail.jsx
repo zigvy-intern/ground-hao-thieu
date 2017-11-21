@@ -6,7 +6,7 @@ class GroundDetail extends React.Component {
       <div>
       <Row>
       <PageHeader>
-      <a href="#"><Glyphicon glyph="menu-left"> </Glyphicon> </a> Ground info
+      <a href="http://localhost:3000/"><Glyphicon glyph="menu-left"> </Glyphicon> </a> Ground info
       </PageHeader>
       </Row>
 
@@ -35,7 +35,7 @@ class GroundDetail extends React.Component {
       <Row>
       <Col>
       <PageHeader>
-      <h3>Comment and Review components insert here</h3>
+      <p>Comment and Review components will be here</p>
       </PageHeader>
       </Col>
       </Row>

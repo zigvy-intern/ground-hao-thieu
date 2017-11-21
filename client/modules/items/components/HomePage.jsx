@@ -32,7 +32,7 @@ class HomePage extends React.Component {
         <option value="other">...</option>
       </FormControl>
     </FormGroup>
-    {' '}
+
     <Navbar.Form pullRight>
     <FormGroup>
         <FormControl type="text" placeholder="Search" />
@@ -44,7 +44,7 @@ class HomePage extends React.Component {
     </Row>
     <Row>
       <Col xs={6} md={4}>
-        <Thumbnail ><a href=""><img src="http://stadiumdb.com/pic-projects/stamford_bridge/stamford_bridge08.jpg" style={{width:"335",height:"250"}} alt="240x200" /></a>
+        <Thumbnail ><a href="http://localhost:3000/Detail"><img src="http://stadiumdb.com/pic-projects/stamford_bridge/stamford_bridge08.jpg" style={{width:"335",height:"250"}} alt="240x200" /></a>
           <h3>Thumbnail label</h3>
           <p>Description</p>
 

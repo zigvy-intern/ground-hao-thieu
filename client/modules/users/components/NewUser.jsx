@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Panel, Input,FormGroup, FormControl, Button, Glyphicon } from 'react-bootstrap';
+import { Col, ControlLabel, Panel, Input,FormGroup, FormControl, Button, Glyphicon, OverlayTrigger, Tooltip} from 'react-bootstrap';
 
 class NewUser extends React.Component {
   render() {
@@ -16,8 +16,19 @@ class NewUser extends React.Component {
                 <br/>
                 <FormControl inputRef={password => this.refPass = password} type="password" placeholder="Password" />
                 <br/>
+                <FormGroup controlId="formControlsSelect">
+                <ControlLabel>I am</ControlLabel>
+                <FormControl componentClass="select" placeholder="select">
+                <OverlayTrigger placement="bottom" overlay= '<Tooltip id="tooltip"><strong>Holy guacamole!</strong> Check this info.</Tooltip>'>
+                <option value="select">Ground Owner</option>
+                </OverlayTrigger>
+                <option value="other">User</option>
+                </FormControl>
+                </FormGroup>
+                <br/>
                 <Button onClick={this.create.bind(this)}
                 bsStyle="primary" type="submit" >Sign up </Button>
+
                 </FormGroup>
               </form>
             </Panel>
