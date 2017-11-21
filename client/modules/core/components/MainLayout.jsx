@@ -36,7 +36,7 @@ const Layout = ({content}) => (
         </Navbar.Collapse>
       </Navbar>
       <Navbar>
-      
+
       {content()}
 
       </Navbar>
