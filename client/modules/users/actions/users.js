@@ -1,14 +1,20 @@
 export default{
 
-  create({Meteor, LocalState}, email, password) {
+  create({Meteor, LocalState}, email, password, name, phoneNumber) {
     if (!email) {
       return LocalState.set('CREATE_USER_ERROR', 'Email is required.');
     }
     if (!password) {
       return LocalState.set('CREATE_USER_ERROR', 'Password is required.');
     }
+    if (!name) {
+      return LocalState.set('CREATE_USER_ERROR', 'Insert Your Name.');
+    }
+    if (!phoneNumber) {
+      return LocalState.set('CREATE_USER_ERROR', 'Insert Your Phone Number.');
+    }
   LocalState.set('CREATE_USER_ERROR', null);
-  Accounts.createUser({email, password});
+  Accounts.createUser({email, password, name, phoneNumber});
   FlowRouter.go('/');
   },
 

@@ -5,6 +5,7 @@ import HomePage from '../items/components/HomePage.jsx';
 import NewUser from '../users/containers/NewUser.js';
 import Login from '../users/containers/Login.js';
 import GroundDetail from '../items/components/PageDetail.jsx';
+import Trigger from '../items/components/Booking.jsx';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(Layout);
@@ -44,5 +45,15 @@ export default function (injectDeps, {FlowRouter}) {
       });
     }
   });
+
+  FlowRouter.route('/booking', {
+    name: 'booking.step1',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Trigger /> )
+      });
+    }
+  });
+
 
 }
