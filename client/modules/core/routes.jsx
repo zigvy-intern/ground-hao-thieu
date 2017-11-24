@@ -5,7 +5,8 @@ import HomePage from '../items/components/HomePage.jsx';
 import NewUser from '../users/containers/NewUser.js';
 import Login from '../users/containers/Login.js';
 import GroundDetail from '../items/components/PageDetail.jsx';
-import Trigger from '../items/components/Booking.jsx';
+import BookingStep from '../items/components/Booking.jsx';
+import Match from '../items/components/Match.jsx';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(Layout);
@@ -47,10 +48,19 @@ export default function (injectDeps, {FlowRouter}) {
   });
 
   FlowRouter.route('/booking', {
-    name: 'booking.step1',
+    name: 'booking.step',
     action() {
       mount(MainLayoutCtx, {
-        content: () => (<Trigger /> )
+        content: () => (<BookingStep /> )
+      });
+    }
+  });
+
+  FlowRouter.route('/match', {
+    name: 'match.find',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<Match />)
       });
     }
   });

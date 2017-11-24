@@ -20,7 +20,9 @@ class GroundDetail extends React.Component {
       <h3> Stadium's Name </h3>
       <p> Description </p>
       <hr/>
+
       <BookingStep />
+      
       </Col>
       </Row>
       <Row>
