@@ -20,11 +20,11 @@ class BookingStep extends React.Component {
           bsStyle="primary"
           onClick={() => this.setState({ show: true })}
         >
-        BOOK NOW
-
+        BOOK NOW!
         </Button>
-        <ModalBooking show={this.state.toggleModal} />
 
+        <ModalBooking show = {this.state.show} />
+        
         <Button>
         <Glyphicon glyph="star-empty"> Favorite</Glyphicon>
         </Button>

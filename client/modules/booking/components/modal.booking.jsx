@@ -20,53 +20,57 @@ class ModalBooking extends Component {
   submitBooking(){
 
   }
+
   render() {
     let modalContent = null;
     let handleButton = null;
+    let modalTitle = null;
     switch (this.state.step) {
       case 1:
+        modalTitle = (
+          <h3> Book your Match </h3>
+        )
         modalContent = <ModalBookingStep1 />
         handleButton = (
-          <Button onClick={() => this.changeStepView(2)}>
-            Step 2
+          <Button
+          bsStyle="primary"
+          onClick={() => this.changeStepView(2)}>
+            Next
           </Button>
         )
         break;
       case 2:
+        modalTitle = (
+          <h3> Complete </h3>
+        )
         modalContent = <ModalBookingStep2 />
         handleButton = (
-          <Button onClick={() => this.changeStepView(3)}>
-            Step 3
-          </Button>
-        )
-        break;
-      case 3:
-        modalContent = <ModalBookingStep3 />
-        handleButton = (
-          <Button onClick={() => this.submitBooking()}>
+          <div>
+          <a href="#"> Invite Team </a>
+          {' '}
+          <Button
+          bsStyle="primary"
+          onClick={() => this.submitBooking()}>
             Finish
           </Button>
+          </div>
         )
         break;
       default:
-
     }
     return (
-      <Modal show={this.props.show} >
+      <Modal show = {this.props.show}>
         <Modal.Header>
-          <Modal.Title id="contained-modal-title">Step 1</Modal.Title>
+          {modalTitle}
         </Modal.Header>
         <Modal.Body>
           {modalContent}
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => this.changeStepView(2)}>
-            Step 2
-          </Button>
-
+          {handleButton}
         </Modal.Footer>
       </Modal>
-    );
+    )
   }
 }
 
