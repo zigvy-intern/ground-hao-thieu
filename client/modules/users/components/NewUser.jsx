@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, ControlLabel, Panel, Input,FormGroup, FormControl, Button, Glyphicon, OverlayTrigger, Tooltip} from 'react-bootstrap';
+import { Col, Input, FormGroup, Panel, FormControl, Button, Glyphicon, ToggleButton, ToggleButtonGroup, ButtonToolbar, Nav} from 'react-bootstrap';
 
 class NewUser extends React.Component {
   render() {
@@ -16,18 +16,23 @@ class NewUser extends React.Component {
                 <br/>
                 <FormControl inputRef={password => this.refPass = password} type="password" placeholder="Password" />
                 <br/>
+                <FormControl inputRef={name => this.refName = name} type="name" placeholder="Your Name" />
+                <br/>
+                <FormControl inputRef={phoneNumber => this.refPhoneNumber = phoneNumber} type="phoneNumber" placeholder="Phone Number" />
+                <br/>
                 <FormGroup controlId="formControlsSelect">
-                <ControlLabel>I am</ControlLabel>
-                <FormControl componentClass="select" placeholder="select">
-                <OverlayTrigger placement="bottom" overlay= '<Tooltip id="tooltip"><strong>Holy guacamole!</strong> Check this info.</Tooltip>'>
-                <option value="select">Ground Owner</option>
-                </OverlayTrigger>
-                <option value="other">User</option>
-                </FormControl>
-                </FormGroup>
+                <ButtonToolbar>
+                <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+                  <ToggleButton value={1}>I'm an User</ToggleButton>
+                  <ToggleButton value={2}>I'm a Ground Owner</ToggleButton>
+                </ToggleButtonGroup>
+                </ButtonToolbar>
                 <br/>
                 <Button onClick={this.create.bind(this)}
                 bsStyle="primary" type="submit" >Sign up </Button>
+                </FormGroup>
+                <br/>
+
 
                 </FormGroup>
               </form>
